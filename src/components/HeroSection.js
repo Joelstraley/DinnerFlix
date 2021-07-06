@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 function HeroSection() {
     const [movie, setMovie] = useState(null)
+    const [mute, setMute] = useState(true)
     const pageState = null
 
     const fetchData = async () => {
@@ -18,13 +19,20 @@ function HeroSection() {
           fetchData()
         }, [])
 
+        function handleMouseEnter(e){ 
+            setMute(false)
+           
+        }
+
+
+ 
     return(
         <div>
             {movie && (
                 <div className="hero">
-                    <video className="hero-video" muted controls autoPlay={true} loop>
-                        <source src={movie.thumbnail} type="video/mp4"/>
-                    </video>
+                   <video className="hero-video" muted onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter} controls autoPlay={true} loop>
+                        <source src={movie.thumbnail} type="video/mp4" />
+                    </video> 
                     <div className="info-section">
                         <h3 className="hero-blurb">{movie.synopsis}</h3>
                     <div className="button-section">
@@ -38,10 +46,15 @@ function HeroSection() {
                         </div>
                         </div>
                     </div>
-
                 </div>
             )}
         </div>
  )
 }
+
 export default HeroSection
+
+
+
+
+

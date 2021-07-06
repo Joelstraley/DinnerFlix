@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  margin: 0 50px;
+  margin: 0 100px;
 }
 
 .navbar {
@@ -14,12 +14,8 @@ body {
   width: 100%;
   position: sticky;
   top: 0;
-}
 
-.hero {
-  width: 100%;
-  margin-top: -100px;
-  padding: 0;
+  background-color:black; 
 }
 
 .info-section {
@@ -65,12 +61,22 @@ video {
   border-radius: 5px;
 }
 
+.hero {
+  width: 100%;
+  margin-top: -100px;
+  padding: 0;
+}
+
 .hero-video {
   width: 100%;
   float: left;
   top: 0;
   padding: none;
   margin-bottom: 30px;
+}
+
+.hero-blurb {
+  text-overflow: initial;
 }
 
 video::-webkit-media-controls {

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Section from "./components/Section";
 import NavBar from "./components/NavBar";
 import HeroSection from './components/HeroSection';
+import Footer from "./components/Footer";
 
 function App() {
     const genreIncrement = 4
@@ -21,8 +22,15 @@ function App() {
 
     useEffect(() => {
       fetchData()
-    }, [, limit])
+    }, [, limit]);
 
+  const handleScroll = async (event) => {
+      const target = await event.target;
+
+      if(target.scrollHeight - target.scrollTop === target.clientHeight){
+        <Footer />
+      }
+    }
 
   console.log(limit)
   return (
@@ -39,7 +47,9 @@ function App() {
             onMouseEnter={() => {
               setLimit(limit + genreIncrement) 
           }}
-        />
+        >  <div className="bottom" onScroll={handleScroll}><Footer/></div> 
+        </div>
+       
     </>
   );
 }
