@@ -6,7 +6,7 @@ import HeroSection from './components/HeroSection';
 import Footer from "./components/Footer";
 
 function App() {
-    const genreIncrement = 4
+    const genreIncrement = 6
     const [genres, setGenres] = useState(null)
     const [limit, setLimit] = useState(genreIncrement)
   
@@ -22,15 +22,17 @@ function App() {
 
     useEffect(() => {
       fetchData()
-    }, [, limit]);
+    }, [limit]);
 
-  const handleScroll = async (event) => {
+/*   const handleScroll = async (event) => {
       const target = await event.target;
 
       if(target.scrollHeight - target.scrollTop === target.clientHeight){
         <Footer />
       }
-    }
+    } */
+
+  
 
   console.log(limit)
   return (
@@ -44,12 +46,16 @@ function App() {
           </div> 
           )}
           <div className="page-end"
-            onMouseEnter={() => {
+            onMouseEnter={() => { 
+              if(limit < 24){
               setLimit(limit + genreIncrement) 
+              }else if (limit > 24){
+              <Footer />
+              }
           }}
-        >  <div className="bottom" onScroll={handleScroll}><Footer/></div> 
+        > 
         </div>
-       
+  
     </>
   );
 }

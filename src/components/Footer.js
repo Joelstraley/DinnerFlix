@@ -2,7 +2,7 @@ function Footer() {
 
     return(
         <div className="footer">
-            <h1>TEST</h1>
+            <img src="https://i.imgur.com/FECLILh.png" alt="Netflix Footer">TEST</img>
         </div>
  )
 }

@@ -20,17 +20,22 @@ function HeroSection() {
         }, [])
 
         function handleMouseEnter(e){ 
-            setMute(false)
-           
+            var video = document.getElementsByClassName("hero-video")
+            console.log("mouse move")
+            if(video.muted){
+                video.muted = true;
+            } else {
+                video.muted = false;
+                console.log(video.muted)
+            }
         }
-
 
  
     return(
         <div>
             {movie && (
-                <div className="hero">
-                   <video className="hero-video" muted onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter} controls autoPlay={true} loop>
+                <div className="hero"  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
+                   <video className="hero-video" muted controls autoPlay={true} loop>
                         <source src={movie.thumbnail} type="video/mp4" />
                     </video> 
                     <div className="info-section">
