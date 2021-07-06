@@ -6,7 +6,7 @@ import HeroSection from './components/HeroSection';
 import Footer from "./components/Footer";
 
 function App() {
-    const genreIncrement = 6
+    const genreIncrement = 4
     const [genres, setGenres] = useState(null)
     const [limit, setLimit] = useState(genreIncrement)
   
@@ -47,14 +47,14 @@ function App() {
           )}
           <div className="page-end"
             onMouseEnter={() => { 
-              if(limit < 24){
+            
               setLimit(limit + genreIncrement) 
-              }else if (limit > 24){
-              <Footer />
-              }
+             
           }}
         > 
         </div>
+        <span></span>
+        <Footer />
   
     </>
   );

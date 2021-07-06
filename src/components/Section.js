@@ -21,7 +21,7 @@ function Section({ genre }) {
     
     return (
         <>
-        <h2 id={genre}>{genre}</h2>
+        <h3 className="genre" id={genre}>{genre}</h3>
         {movies && (
             <div className="movie-section">
                 {movies.map((movie, index) => (

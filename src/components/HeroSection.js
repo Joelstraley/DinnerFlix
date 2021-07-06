@@ -41,10 +41,11 @@ function HeroSection() {
                     <div className="info-section">
                         <h3 className="hero-blurb">{movie.synopsis}</h3>
                     <div className="button-section">
+                    <a href="https://www.youtube.com/watch?v=O4lvOjiHFw0">
                         <div className="button play">
                             <span><i className="fas fa-play"></i></span>
                             &nbsp;Play
-                        </div>
+                        </div></a>
                         <div className="button more">
                             <span><i className="fas fa-info-circle"></i></span>
                             &nbsp;More Info

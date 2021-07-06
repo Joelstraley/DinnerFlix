@@ -17,8 +17,22 @@ function Card({ movie }) {
                 <source src={movie.thumbnail} type="video/mp4" />
                 </video>
                 <div className="info-box">
-                    <p>{movie.title}</p>
-                    <p>{movie.duration}</p>
+                    <div className="icons">
+                        <i class="far fa-play-circle">&nbsp;</i>
+                        <i class="fas fa-plus-circle">&nbsp;</i>
+                        <i class="far fa-thumbs-up">&nbsp;</i>
+                        <br />
+                    </div>
+                <div className="movie-info">
+                    <span id="match"><strong>100% Match&nbsp;&nbsp;</strong></span>
+                    <span id="rating">PG</span>
+                    <span>&nbsp;&nbsp;1h 51m</span>
+                </div>
+                <div className="movie-details">
+                    <span className="details">Comedy&nbsp;<span className="dot">&#183;</span>&nbsp;</span>
+                    <span className="details">Drama&nbsp;<span className="dot">&#183;</span>&nbsp;</span>
+                    <span className="details">Dinner</span>
+                </div>
                 </div>
                 </>
                 )}
