@@ -46,7 +46,10 @@ body {
 }   
 
 .movie-section {
-  display: flex;
+ /*  display: flex; */
+ display: inline-flex;
+  position: relative;
+  z-index: 8;
 }
 
 .button-section {
@@ -89,6 +92,7 @@ video {
   width: 100%;
   margin-top: -100px;
   padding: 0;
+
 }
 
 .hero-video {
@@ -103,6 +107,9 @@ video {
 .hero-blurb {
   text-overflow: initial;
   margin-top: inherit;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 video::-webkit-media-controls {
@@ -123,7 +130,7 @@ video::-webkit-media-controls {
 .movie-section .card:focus,
 .movie-section .card:hover {
   transform: scale(1.5);
-  z-index: 1;
+  z-index: 9;
   background-color: #141414;
   padding-bottom: 10px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -191,6 +198,9 @@ li {
   z-index: 5;
   padding-top: 20px;
   padding: 5%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 
@@ -246,17 +256,68 @@ li {
 
 .footer {
   display: flex;
-  position: absolute;
+ /*  position: absolute; */
   justify-content: center;
+  margin-bottom: 1%;
 }
 
 
-@media screen and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4 / 3)
+@media screen and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4 / 3){
 body, html {
     font-size: .75vw;
 }
-
-@media screen and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape)
-body, html {
-    font-size: .85vw;
 }
+@media screen and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
+body, html {
+    /* font-size: .85vw; */
+}
+}
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+
+  body, html {
+    font-size: 75%;
+}
+
+.nav
+
+#root {
+  width: 100%;
+}
+
+.container {
+  width: 100;
+}
+
+.button-section, .hero-blurb {
+  margin-left: -3em;
+  font-size: 7px;
+  overflow-wrap:break-word;
+}
+
+.movie-section {
+  width: 1000%;
+  margin-left: -3em;
+}
+
+.hero-video, .hero, .hero-blurb {
+  width: 100%;
+  margin-top: 50px;
+}
+
+}
+
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+

@@ -22,7 +22,7 @@ function App() {
 
     useEffect(() => {
       fetchData()
-    }, [limit]);
+    }, [, limit]);
 
 /*   const handleScroll = async (event) => {
       const target = await event.target;
@@ -47,9 +47,7 @@ function App() {
           )}
           <div className="page-end"
             onMouseEnter={() => { 
-            
               setLimit(limit + genreIncrement) 
-             
           }}
         > 
         </div>
