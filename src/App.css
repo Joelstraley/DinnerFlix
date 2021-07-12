@@ -2,7 +2,6 @@ body {
   background-color: #141414;
   color: #fff;
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-
 }
 
 .container {
@@ -57,10 +56,10 @@ body {
 }
 
 .button {
-  border-radius: 10px;
+  border-radius: 6px;
   background-color: #fff;
   color: #000;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin: 3px;
 }
 
@@ -105,6 +104,7 @@ video {
 }
 
 .hero-blurb {
+  max-width: 175rem;
   text-overflow: initial;
   margin-top: inherit;
   overflow-wrap: break-word;
@@ -174,7 +174,7 @@ a {
   height: 310px;
   margin-top: 5em;
   margin-left: -2em;
-  margin-bottom: 2em;
+  margin-bottom: 2%;
   background-image: url('https://i.imgur.com/SpphZp6.png');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -188,8 +188,8 @@ ul {
 }
 
 li {
-  margin: 0 10px;
-  margin: 5px;
+  margin: 10px 10px;
+  margin: 20px;
   justify-content: center;
 }
 
@@ -264,7 +264,7 @@ li {
 
 @media screen and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4 / 3){
 body, html {
-    font-size: .75vw;
+    
 }
 }
 @media screen and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
@@ -281,7 +281,13 @@ and (max-device-width: 812px)
 and (-webkit-min-device-pixel-ratio: 3) { 
 
   body, html {
-    font-size: 75%;
+    font-size: 75%; 
+    display: flex;
+   flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+     padding: 1rem; 
 }
 
 .nav
@@ -290,25 +296,49 @@ and (-webkit-min-device-pixel-ratio: 3) {
   width: 100%;
 }
 
-.container {
-  width: 100;
+/* .container {
+  width: 100%;
+} */
+
+.logo {
+  margin-left: -7em;
 }
 
 .button-section, .hero-blurb {
-  margin-left: -3em;
+  margin-left: -40px;
+  margin-top: -10;
   font-size: 7px;
   overflow-wrap:break-word;
+  max-width: 12rem;  
 }
 
 .movie-section {
-  width: 1000%;
-  margin-left: -3em;
+  width: 500%;
+  margin-left: -8em;
+  margin-bottom: -10%;
+  
+}
+ 
+.button {
+  padding: 9px;
 }
 
 .hero-video, .hero, .hero-blurb {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
 }
+
+.hero-blurb {
+  text-shadow: 1px 1px #141414;
+}
+
+.info-section {
+  margin-top: 25%;
+}
+
+/* h3 {
+  margin-left: -15%;
+} */
 
 }
 
@@ -320,4 +350,5 @@ and (-webkit-min-device-pixel-ratio: 3) {
   and (-webkit-device-pixel-ratio: 3) {
 
 }
+
 
