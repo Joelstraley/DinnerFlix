@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 function HeroSection() {
     const [movie, setMovie] = useState(null)
-    const [mute, setMute] = useState(true)
     const pageState = null
 
     const fetchData = async () => {
@@ -19,22 +18,11 @@ function HeroSection() {
           fetchData()
         }, [])
 
-        function handleMouseEnter(e){ 
-            var video = document.getElementsByClassName("hero-video")
-            console.log("mouse move")
-            if(video.muted){
-                video.muted = true;
-            } else {
-                video.muted = false;
-                console.log(video.muted)
-            }
-        }
-
  
     return(
         <div>
             {movie && (
-                <div className="hero"  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseEnter}>
+                <div className="hero" >
                    <video className="hero-video" muted controls autoPlay={true} loop>
                         <source src={movie.thumbnail} type="video/mp4" />
                     </video> 
