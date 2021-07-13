@@ -261,7 +261,7 @@ li {
   margin-bottom: 1%;
 }
 
-
+/* 
 @media screen and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4 / 3){
 body, html {
     
@@ -269,9 +269,9 @@ body, html {
 }
 @media screen and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
 body, html {
-    /* font-size: .85vw; */
-}
-}
+    font-size: .85vw;
+} 
+} */
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
