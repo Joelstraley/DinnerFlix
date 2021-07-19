@@ -33,7 +33,7 @@ function Section({ genre }) {
                         fetchData();
                     }}
                     >
-                    <i className="fas fa-angle-right"></i>
+                    <i className="fas fa-angle-right fa-5x"></i>
                     </div> 
                 </div>
             )}

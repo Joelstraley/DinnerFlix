@@ -4,6 +4,7 @@ import Section from "./components/Section";
 import NavBar from "./components/NavBar";
 import HeroSection from './components/HeroSection';
 import Footer from "./components/Footer";
+import Credit from './components/Credit';
 
 function App() {
     const genreIncrement = 4
@@ -50,9 +51,11 @@ function App() {
               setLimit(limit + genreIncrement) 
           }}
         > 
-        </div>
-        <span></span>
+        {/* <span></span> */}
         <Footer />
+        </div>
+        <Credit />
+        
   
     </>
   );

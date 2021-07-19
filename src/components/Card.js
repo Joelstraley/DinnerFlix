@@ -18,11 +18,13 @@ function Card({ movie }) {
                 </video>
                 <div className="info-box">
                     <div className="icons">
-                        <i class="far fa-play-circle">&nbsp;</i>
+                    <a href="https://www.youtube.com/watch?v=O4lvOjiHFw0">
+                        <i class="far fa-play-circle">&nbsp;</i> </a>
                         <i class="fas fa-plus-circle">&nbsp;</i>
                         <i class="far fa-thumbs-up">&nbsp;</i>
                         <br />
                     </div>
+    
                 <div className="movie-info">
                     <span id="match"><strong>100% Match&nbsp;&nbsp;</strong></span>
                     <span id="rating">PG</span>
