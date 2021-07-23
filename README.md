@@ -7,7 +7,7 @@ A ReactJS Netflix homepage clone, with ONLY the movie "My Dinner with Andre, run
 [View Live Site](https://dinnerflix.netlify.app/)
 
 ## Screenshot: 
-(https://github.com/Joelstraley/DinnerFlix/blob/main/public/dinnerflix-app.png?raw=true)
+![alt text](https://github.com/Joelstraley/DinnerFlix/blob/main/public/dinnerflix-app.png?raw=true)
 
 ## <a name="Thanks">Thanks</a>
 Built by modifying a tutorial from Ania Kubow and Datastax.
