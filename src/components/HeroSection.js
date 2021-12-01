@@ -1,54 +1,53 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 function HeroSection() {
-    const [movie, setMovie] = useState(null)
-    const pageState = null
+  const [movie, setMovie] = useState(null)
+  const pageState = null
 
-    const fetchData = async () => {
-        const response = await fetch (".netlify/functions/getMovies", {
-            method: "POST",
-            body: JSON.stringify({ genre: "Romance", pageState: pageState })
-        })
-        const responseBody = await response.json()
-        const movies = responseBody.data.movies_by_genre.values
-        setMovie(movies[Math.floor(Math.random() * movies.length)])
-      } 
+  const fetchData = async () => {
+    const response = await fetch('.netlify/functions/getMovies', {
+      method: 'POST',
+      body: JSON.stringify({ genre: 'Romance', pageState: pageState }),
+    })
+    const responseBody = await response.json()
+    const movies = responseBody.data.movies_by_genre.values
+    setMovie(movies[Math.floor(Math.random() * movies.length)])
+  }
 
-        useEffect(() => {
-          fetchData()
-        }, [])
+  useEffect(() => {
+    fetchData()
+  }, [])
 
- 
-    return(
-        <div>
-            {movie && (
-                <div className="hero" >
-                   <video className="hero-video" muted controls autoPlay={true} loop>
-                        <source src={movie.thumbnail} type="video/mp4" />
-                    </video> 
-                    <div className="info-section">
-                        <h3 className="hero-blurb">{movie.synopsis}</h3>
-                    <div className="button-section">
-                    <a href="https://www.youtube.com/watch?v=O4lvOjiHFw0">
-                        <div className="button play">
-                            <span><i className="fas fa-play"></i></span>
-                            &nbsp;Play
-                        </div></a>
-                        <div className="button more">
-                            <span><i className="fas fa-info-circle"></i></span>
-                            &nbsp;More Info
-                        </div>
-                        </div>
-                    </div>
+  return (
+    <div>
+      {movie && (
+        <div className="hero">
+          <video className="hero-video" muted controls autoPlay={true} loop>
+            <source src={movie.thumbnail} type="video/mp4" />
+          </video>
+          <div className="info-section">
+            <h3 className="hero-blurb">{movie.synopsis}</h3>
+            <div className="button-section">
+              <a href="https://www.youtube.com/watch?v=O4lvOjiHFw0">
+                <div className="button play">
+                  <span>
+                    <i className="fas fa-play"></i>
+                  </span>
+                  &nbsp;Play
                 </div>
-            )}
+              </a>
+              <div className="button more">
+                <span>
+                  <i className="fas fa-info-circle"></i>
+                </span>
+                &nbsp;More Info
+              </div>
+            </div>
+          </div>
         </div>
- )
+      )}
+    </div>
+  )
 }
 
 export default HeroSection
-
-
-
-
-
