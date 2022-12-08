@@ -30,15 +30,6 @@ function Section({ genre }) {
             {movies.map((movie, index) => (
               <Card key={index} movie={movie} />
             ))}
-            {/*   <div
-              className="more-button"
-              onClick={() => {
-                setPageState(pageState)
-                fetchData()
-              }}
-            >
-              <i className="fas fa-angle-right fa-5x"></i>
-            </div> */}
           </div>
         </div>
       )}

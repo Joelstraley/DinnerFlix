@@ -5,7 +5,6 @@ import NavBar from './components/NavBar'
 import HeroSection from './components/HeroSection'
 import Footer from './components/Footer'
 import Credit from './components/Credit'
-/* import Scroll from 'react-scroll-component' */
 require('dotenv').config()
 
 function App() {
@@ -27,18 +26,13 @@ function App() {
     fetchData()
   }, [limit])
 
-  /*   const handleScroll = async (event) => {
-      const target = await event.target;
-
-      if(target.scrollHeight - target.scrollTop === target.clientHeight){
-        <Footer />
-      }
-    } */
-
-  /* console.log(limit) */
-
   return (
-    <div className="main-container">
+    <div
+      className="main-container"
+      onScroll={() => {
+        setLimit(limit + genreIncrement)
+      }}
+    >
       <NavBar />
       <HeroSection />
       {genres && (

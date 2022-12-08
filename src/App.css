@@ -143,21 +143,6 @@ h3 {
   top: 0;
   padding: none;
   margin-bottom: 20px; 
-  /*    position: absolute;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    opacity: 1;
-    -webkit-transition: opacity .4s cubic-bezier(.665,.235,.265,.8) 0s;
-    -o-transition: opacity .4s cubic-bezier(.665,.235,.265,.8) 0s;
-    -moz-transition: opacity .4s cubic-bezier(.665,.235,.265,.8) 0s;
-    transition: opacity .4s cubic-bezier(.665,.235,.265,.8) 0s; */
 }
 
 .hero-blurb {
@@ -238,27 +223,7 @@ a {
   min-width: 25%;
   max-width: 25%;
   margin-top: 4em;
-
-/*   width: 9em;
-  height: 9em;
-  /* background-image: url('https://i.imgur.com/AfD3qAs.png'); 
-  background-size: 100%;
-  margin: -10px;
-  background-repeat: no-repeat; */
 }
-
-/* .more-button:hover {
-  display: flex;
-  background-color: rgba(3, 3, 3, 0.8);
-  box-shadow: rgb(255, 255, 255, 0.5);
-  opacity: 1;
-  transform: none;
-  transition: opacity 0.2s ease-in;
-} */
-
-/* .fa-angle-right:hover {
-  opacity: 1;
-} */
 
 .page-end {
   width: 100%;
@@ -368,11 +333,11 @@ li {
 @media screen and (max-width: 799px) {
 
   .info-section {
-    margin-top: 40%;
+    margin-top: 36%;
   }
 
   .hero-blurb {
-    font-size: small;
+    font-size: medium;
   }
 
   .movie-row {
@@ -433,9 +398,5 @@ li {
     transform: none;
   /*  transform: scale(1.5); */
   }
-
-/*   .block-mobile-scroll {
-    overflow-x: none;
-  } */
 }
 
