@@ -22,6 +22,8 @@ function Card({ movie }) {
 
   /*   const isMobile = navigator.userAgentData.mobile */
 
+  /*  const blockMobileScroll = { 'overflow-x': 'none;' }
+   */
   return (
     <div
       className="card"
@@ -31,9 +33,13 @@ function Card({ movie }) {
       onMouseLeave={() => setIsShown(false)}
     >
       {!isShown && (
-        <video className="video" poster="https://i.imgur.com/J9TWdhm.jpeg">
-          <source src={movie.thumbnail} type="video/mp4" />
-        </video>
+        <>
+          <img
+            className="video"
+            src="https://i.imgur.com/J9TWdhm.jpeg"
+            alt="My Dinner with Andre Poster"
+          />
+        </>
       )}
 
       {/*       {!isShown && !isMobile && (
@@ -48,7 +54,7 @@ function Card({ movie }) {
 
       {isShown && (
         <>
-          <video className="video" controls autoPlay loop>
+          <video className="video" autoPlay={true}>
             <source src={movie.thumbnail} type="video/mp4" />
           </video>
           <div className="info-box">

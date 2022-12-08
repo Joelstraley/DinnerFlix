@@ -46,18 +46,18 @@ body {
   z-index: 10;
 }
 
-.searchHeader {
+/* .searchHeader {
   position: absolute;
   /*  top: 5px;
-  right: 20px; */
+  right: 20px; 
   top: 0;
   right: -40px;
-  /*   width: 17em; */
+  /*   width: 17em;
   height: 2.75em;
   background-image: url('https://i.imgur.com/AfD3qAs.png');
   background-size: 120%;
 }
-
+ */
 .info-section {
   position: absolute;
   margin-top: 33%;
@@ -120,7 +120,7 @@ h3 {
   background-color: #141414;
 }
 
-video {
+.video {
  /*  width: 100%;
   border-radius: 2px; */
   border-radius: 2px;
@@ -194,6 +194,7 @@ video::-webkit-media-controls {
 .movie-section .card:hover {
   position: static; 
   transform: scale(1.5);
+ /*  transform: scale(1.5); */
   z-index: 9;
   background-color: #141414;
   /* padding-bottom: 10px; */
@@ -246,18 +247,18 @@ a {
   background-repeat: no-repeat; */
 }
 
-.more-button:hover {
+/* .more-button:hover {
   display: flex;
   background-color: rgba(3, 3, 3, 0.8);
   box-shadow: rgb(255, 255, 255, 0.5);
   opacity: 1;
   transform: none;
   transition: opacity 0.2s ease-in;
-}
+} */
 
-.fa-angle-right:hover {
+/* .fa-angle-right:hover {
   opacity: 1;
-}
+} */
 
 .page-end {
   width: 100%;
@@ -385,6 +386,23 @@ li {
     overflow-y: visible;
     white-space: nowrap;
   }
+
+  .card:focus ~ .card,
+  .card:hover ~ .card {
+    transform: none;
+    /* margin-left: auto; */
+  }
+
+  .movie-section .card:focus,
+  .movie-section .card:hover {
+    position: static; 
+    transform: none;
+  /*  transform: scale(1.5); */
+  }
+
+  .card:first-child:focus, .card:first-child:hover {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -397,93 +415,27 @@ li {
     max-width: 40%;
   }
 
+/*   .card:first-child:focus, 
+  .card:first-child:hover {
+  margin-left: auto;
 }
 
-/* 
-@media screen and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4 / 3){
-body, html {
-    
+ */
+  .card:focus ~ .card,
+  .card:hover ~ .card {
+    transform: none;
+    /* margin-left: auto; */
+  }
+
+  .movie-section .card:focus,
+  .movie-section .card:hover {
+    position: static; 
+    transform: none;
+  /*  transform: scale(1.5); */
+  }
+
+/*   .block-mobile-scroll {
+    overflow-x: none;
+  } */
 }
-}
-@media screen and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
-body, html {
-    font-size: .85vw;
-} 
-} */
-/* ----------- iPhone X ----------- */
 
-/* Portrait and Landscape */
-/* @media only screen and (min-device-width: 175px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-  body,
-  html {
-    font-size: 75%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    padding: 0.5rem;
-  }
-
-  #root {
-    width: 100%;
-  }
-
-  .container {
-    width: 100%;
-    overflow: inherit;
-  }
-
-  .logo {
-    margin-left: -7em;
-
-    width: 3em;
-    height: 3em;
-    background-image: url('https://i.imgur.com/AfD3qAs.png');
-    background-size: 100%;
-  }
-
-  .button-section,
-  .hero-blurb {
-    margin-left: -40px;
-    margin-top: -10;
-    font-size: 7px;
-    overflow-wrap: break-word;
-    max-width: 12rem;
-  }
-
-  .movie-section {
-    /*     width: 150%; 
-    margin-left: -8em;
-    margin-bottom: -10%;
-  }
-
-  .button {
-    padding: 9px;
-  }
-
-  .hero-video,
-  .hero,
-  .hero-blurb {
-    width: 100%;
-    margin-top: 20px;
-    max-height: 100vh;
-  }
-
-  .hero-blurb {
-    text-shadow: 1px 1px #141414;
-  }
-
-  .info-section {
-    margin-top: 25%;
-  }
-
-  h3 {
-    margin-left: -15%;
-    z-index: 10000;
-  }
-} */
-
-/* Portrait and Landscape */
-/* @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
-} */
