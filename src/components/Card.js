@@ -20,9 +20,7 @@ function Card({ movie }) {
     }
   } */
 
-  const isMobile = navigator.userAgentData.mobile
-
-  console.log('MOBILE', isMobile, 'MOVIE', movie)
+  /*   const isMobile = navigator.userAgentData.mobile */
 
   return (
     <div
@@ -32,18 +30,13 @@ function Card({ movie }) {
       onMouseOut={(() => setIsShown(false), console.log('out'))} */
       onMouseLeave={() => setIsShown(false)}
     >
-      {!isShown && isMobile && (
-        <video
-          className="video"
-          poster="https://i.imgur.com/J9TWdhm.jpeg"
-          controls
-          autoPlay
-        >
+      {!isShown && (
+        <video className="video" poster="https://i.imgur.com/J9TWdhm.jpeg">
           <source src={movie.thumbnail} type="video/mp4" />
         </video>
       )}
 
-      {!isShown && !isMobile && (
+      {/*       {!isShown && !isMobile && (
         <video
           className="video"
           poster="https://i.imgur.com/J9TWdhm.jpeg"
@@ -51,7 +44,7 @@ function Card({ movie }) {
         >
           <source src={movie.thumbnail} type="video/mp4" />
         </video>
-      )}
+      )} */}
 
       {isShown && (
         <>
