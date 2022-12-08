@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function Card({ movie }) {
   const [isShown, setIsShown] = useState(false)
