@@ -3,12 +3,16 @@ function NavBar() {
     <div className="navbar">
       <ul>
         <li>
-          <div className="logo"></div>
+          <img
+            src="https://i.imgur.com/AfD3qAs.png"
+            className="logo"
+            alt="dinneflix-logo"
+          />
         </li>
         <li>
           <a href="/">Home</a>
         </li>
-        <li>
+        {/*       <li>
           <a href="/">
             <img
               className="searchHeader"
@@ -16,7 +20,7 @@ function NavBar() {
               alt="netflix header"
             />
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   )

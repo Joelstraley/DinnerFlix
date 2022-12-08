@@ -24,46 +24,61 @@ body {
   font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
-  margin: 0 100px;
+  margin: 0 0 0 2rem;
 }
 
 .navbar {
-  height: 50px;
-  width: 100%;
-  position: sticky;
+  max-height: 50px;
+  width: auto;
+/*   position: sticky; */
   top: 0;
   background-color: #141414fb;
   margin-top: -100px;
-  z-index: 12;
+  z-index: 10;
 }
 
 .searchHeader {
-  margin-left: 100%;
   position: absolute;
-  top: 5px;
-  right: 20px;
-  width: 17em;
+  /*  top: 5px;
+  right: 20px; */
+  top: 0;
+  right: -40px;
+  /*   width: 17em; */
   height: 2.75em;
   background-image: url('https://i.imgur.com/AfD3qAs.png');
   background-size: 120%;
-  background-repeat: no-repeat;
 }
 
 .info-section {
   position: absolute;
-  margin-top: 35%;
-  margin-left: 70px;
-  width: 600px;
+  margin-top: 33%;
+  margin-left: 7%;
+  max-height: 65%;
+  width: 75%;
+  word-wrap: break-word;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 .genre {
-  margin-left: -50px;
+ /*  margin-left: -50px; */
   margin-bottom: 5px;
   font-weight: 700;
   color: #e5e5e5;
+}
+
+.movie-row {
+  /* margin-left: .9375rem; */
+ /*  margin-left: 4em; */
 }
 
 .movie-section {
@@ -71,6 +86,8 @@ body {
   display: inline-flex;
   /*  position: relative; */
   z-index: 8;
+  width: 120%;
+  /*  width: 100%; */
 }
 
 .button-section {
@@ -95,7 +112,7 @@ h3 {
 
 .card {
   width: 230px;
-  border-radius: 5px;
+  border-radius: 2px;
   margin: 2px;
   transition: transform 500ms;
   position: relative;
@@ -104,8 +121,13 @@ h3 {
 }
 
 video {
-  width: 100%;
-  border-radius: 5px;
+ /*  width: 100%;
+  border-radius: 2px; */
+  border-radius: 2px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: inherit;
 }
 
 .hero {
@@ -115,13 +137,13 @@ video {
 }
 
 .hero-video {
-  width: 100%;
+  width: 100vw;
   margin-top: 10em;
   float: left;
   top: 0;
   padding: none;
-  margin-bottom: 20px;
-  /*   position: absolute;
+  margin-bottom: 20px; 
+  /*    position: absolute;
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -142,9 +164,10 @@ video {
   max-width: 175rem;
   text-overflow: initial;
   margin-top: inherit;
-  overflow-wrap: break-word;
+/*   overflow-wrap: break-word; */
   word-wrap: break-word;
-  hyphens: auto;
+  /* hyphens: auto; */
+  font-size: larger;
 }
 
 video::-webkit-media-controls {
@@ -152,19 +175,24 @@ video::-webkit-media-controls {
 }
 
 .movie-section:focus-within .card,
-.movie-section:focus,
+.movie-section:focus {
+  z-index: 1;
+}
+
 .card {
-  transform: translate(-25%);
   z-index: 1;
 }
 
 .card:focus ~ .card,
 .card:hover ~ .card {
   transform: translateX(25%);
+  overflow-x: visible;
+/*   overflow-y: auto; */
 }
 
 .movie-section .card:focus,
 .movie-section .card:hover {
+  position: static; 
   transform: scale(1.5);
   z-index: 9;
   background-color: #141414;
@@ -173,9 +201,17 @@ video::-webkit-media-controls {
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.5),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.5);
+ /*    position: absolute; */
 }
 
-.more-button {
+
+.card:first-child:focus, 
+.card:first-child:hover {
+  margin-left: 20px;
+}
+
+
+/* .more-button {
   display: flex;
   padding: 25px 10px;
   margin-left: -7em;
@@ -186,7 +222,7 @@ video::-webkit-media-controls {
 
 .fas {
   margin: 0 3px;
-}
+} */
 
 /* .fa-angle-right{
   opacity: .05;
@@ -198,12 +234,16 @@ a {
 }
 
 .logo {
-  width: 9em;
+  min-width: 25%;
+  max-width: 25%;
+  margin-top: 4em;
+
+/*   width: 9em;
   height: 9em;
-  background-image: url('https://i.imgur.com/AfD3qAs.png');
+  /* background-image: url('https://i.imgur.com/AfD3qAs.png'); 
   background-size: 100%;
   margin: -10px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .more-button:hover {
@@ -254,7 +294,7 @@ li {
   transition-duration: 2s;
   transition-property: padding;
   transition-timing-function: ease-in-out;
-  /*  transform: translateY(130%); */
+  /*  transform: translateY(130%);
   /*   transition-timing-function: ease-in; */
   transition: padding 0.2s ease-in;
 }
@@ -323,6 +363,42 @@ li {
   color: rgb(255, 255, 255, 0.5);
 }
 
+
+@media screen and (max-width: 799px) {
+
+  .info-section {
+    margin-top: 40%;
+  }
+
+  .hero-blurb {
+    font-size: small;
+  }
+
+  .movie-row {
+    margin-left: auto;
+  }
+
+  .movie-section {
+    display: flex;
+    /*  justify-content: center; */
+    overflow-x: scroll;
+    overflow-y: visible;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .info-section {
+    margin-top: 38%;
+  }
+
+  .logo {
+    max-width: 40%;
+  }
+
+}
+
 /* 
 @media screen and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4 / 3){
 body, html {
@@ -337,7 +413,7 @@ body, html {
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+/* @media only screen and (min-device-width: 175px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
   body,
   html {
     font-size: 75%;
@@ -354,12 +430,17 @@ body, html {
   }
 
   .container {
-    width: 40%;
+    width: 100%;
     overflow: inherit;
   }
 
   .logo {
     margin-left: -7em;
+
+    width: 3em;
+    height: 3em;
+    background-image: url('https://i.imgur.com/AfD3qAs.png');
+    background-size: 100%;
   }
 
   .button-section,
@@ -372,7 +453,7 @@ body, html {
   }
 
   .movie-section {
-    width: 500%;
+    /*     width: 150%; 
     margin-left: -8em;
     margin-bottom: -10%;
   }
@@ -386,6 +467,7 @@ body, html {
   .hero-blurb {
     width: 100%;
     margin-top: 20px;
+    max-height: 100vh;
   }
 
   .hero-blurb {
@@ -396,11 +478,12 @@ body, html {
     margin-top: 25%;
   }
 
-  /* h3 {
-  margin-left: -15%;
+  h3 {
+    margin-left: -15%;
+    z-index: 10000;
+  }
 } */
-}
 
 /* Portrait and Landscape */
-@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
-}
+/* @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+} */

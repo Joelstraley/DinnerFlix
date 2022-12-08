@@ -5,6 +5,7 @@ import NavBar from './components/NavBar'
 import HeroSection from './components/HeroSection'
 import Footer from './components/Footer'
 import Credit from './components/Credit'
+/* import Scroll from 'react-scroll-component' */
 require('dotenv').config()
 
 function App() {
@@ -12,17 +13,17 @@ function App() {
   const [genres, setGenres] = useState(null)
   const [limit, setLimit] = useState(genreIncrement)
 
-  const fetchData = async () => {
-    const response = await fetch('.netlify/functions/getGenres', {
-      method: 'POST',
-      body: limit,
-    })
-    const responseBody = await response.json()
-    console.log('this is the response body', responseBody)
-    setGenres(responseBody.data.reference_list.values)
-  }
-
   useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('.netlify/functions/getGenres', {
+        method: 'POST',
+        body: limit,
+      })
+      const responseBody = await response.json()
+      console.log('this is the response body', responseBody)
+      setGenres(responseBody.data.reference_list.values)
+    }
+
     fetchData()
   }, [limit])
 
@@ -34,9 +35,10 @@ function App() {
       }
     } */
 
-  console.log(limit)
+  /* console.log(limit) */
+
   return (
-    <>
+    <div className="main-container">
       <NavBar />
       <HeroSection />
       {genres && (
@@ -55,7 +57,7 @@ function App() {
         <Footer />
       </div>
       <Credit />
-    </>
+    </div>
   )
 }
 

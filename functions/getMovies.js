@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
 
 exports.handler = async function (event) {
   const body = JSON.parse(event.body)
@@ -34,7 +34,7 @@ exports.handler = async function (event) {
       'x-cassandra-token': process.env.ASTRA_DB_APPLICATION_TOKEN,
     },
     body: JSON.stringify({ query }),
-  })
+  });
 
   try {
     const responseBody = await response.json()
@@ -49,4 +49,4 @@ exports.handler = async function (event) {
       body: JSON.stringify(e),
     }
   }
-}
+};
