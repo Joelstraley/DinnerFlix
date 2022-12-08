@@ -16,7 +16,7 @@ function Section({ genre }) {
       setPageState(responseBody.data.movies_by_genre.pageState)
     }
     fetchData()
-  }, [genre, pageState])
+  }, [])
 
   return (
     <>
